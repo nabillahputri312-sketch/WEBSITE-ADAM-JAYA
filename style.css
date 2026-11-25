@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap');
+
+:root{
+  --cream:#f6eddc; --dark:#2b2118; --green:#12803f; --brown:#a85a14;
+  --sand:#e8d9b5; --line:#d9c99f; --mint:#dcefe1; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--cream);color:var(--dark);line-height:1.55;font-size:16px}
+h1,h2,h3,.brand span{font-family:'Barlow Condensed',sans-serif;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid var(--line)}
+header.dark{background:var(--dark);color:var(--cream);border-color:#3d3024}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:720px;margin:0 auto;padding:0 16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:40px;height:40px;border-radius:8px}
+.brand span{font-size:24px;letter-spacing:1px;text-transform:uppercase}
+.burger{width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;font-size:22px;cursor:pointer}
+nav{display:none;background:var(--cream);border-bottom:1px solid var(--line)}
+nav.open{display:block}
+nav a{display:block;padding:14px 16px;max-width:720px;margin:0 auto;font-weight:500;border-top:1px solid var(--line)}
+nav a.active{color:var(--green);font-weight:600}
+
+/* buttons */
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;font-weight:600;font-size:16px;border:1.5px solid transparent;cursor:pointer;width:100%}
+.btn-wa{background:var(--green);color:#fff}
+.btn-wa:hover{background:#0e6b34}
+.btn-line{border-color:#8a7c68;color:var(--cream);background:transparent}
+.btn-white{background:#fff;color:var(--dark)}
+.btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+
+/* floating WA */
+.fab{position:fixed;right:16px;bottom:24px;width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:60}
+.fab svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2}
+
+main{padding-bottom:32px}
+h1.page{font-size:44px;line-height:1.1;padding-top:28px}
+.lead{margin:8px 0 20px;color:#4a3d30}
+
+/* hero */
+.hero{background:var(--dark);color:var(--cream);padding:28px 0 24px}
+.eyebrow{color:var(--sand);letter-spacing:2.5px;font-size:13px;font-weight:500;text-transform:uppercase}
+.hero h1{font-size:46px;line-height:1.05;margin:10px 0 12px;color:#fff}
+.hero p{color:#d9cdb6;margin-bottom:18px}
+.hero .btn-line{margin-top:12px}
+.hero-img{width:100%;height:314px;object-fit:cover}
+.feat{display:flex;gap:14px;padding:12px 0;align-items:flex-start}
+.feat .ic{flex:0 0 44px;height:44px;border-radius:10px;background:var(--sand);display:flex;align-items:center;justify-content:center}
+.feat svg{width:22px;height:22px;fill:none;stroke:var(--dark);stroke-width:1.8}
+.feat h3{font-size:19px;font-family:'Barlow',sans-serif;font-weight:600}
+.feat p{color:#6b5d4d;font-size:15px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin:28px 0 14px}
+.sec-head h2{font-size:34px}
+.sec-head a{color:var(--brown);font-weight:600;font-size:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pcard img{width:100%;height:137px;object-fit:cover}
+.pcard div{padding:8px 10px 10px}
+.pcard b{display:block;font-size:17px}
+.pcard small{color:#6b5d4d}
+.cta{background:var(--brown);color:#fff;border-radius:16px;padding:20px 16px;margin:24px 0}
+.cta h2{font-size:30px;line-height:1.1}
+.cta p{margin:8px 0 16px;color:#fbe9d5}
+
+/* catalog */
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+.tab{height:48px;border-radius:24px;border:2px solid var(--dark);background:transparent;font:600 16px 'Barlow',sans-serif;color:var(--dark);cursor:pointer}
+.tab.on{background:var(--dark);color:var(--cream)}
+.panel{display:none}.panel.on{display:block}
+.item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:14px}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row img{width:116px;height:86px;object-fit:cover;border-radius:10px;flex:0 0 116px}
+.item h3{font-size:22px;font-family:'Barlow',sans-serif;font-weight:600;line-height:1.2}
+.price{color:var(--brown);font-weight:600;font-size:15px}
+.item p{margin:10px 0 12px;color:#4a3d30;font-size:15px}
+.item .big{width:100%;height:252px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.item .btn{height:48px}
+.note{background:var(--sand);border-radius:12px;padding:14px 16px;font-size:15px;color:#4a3d30}
+
+/* cara pesan */
+.steps{list-style:none;margin:20px 0}
+.steps li{display:flex;gap:14px;margin-bottom:18px}
+.num{flex:0 0 38px;height:38px;border-radius:50%;background:var(--dark);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600}
+.steps h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:19px}
+.steps p{color:#6b5d4d;font-size:15px}
+h2.sub{font-size:28px;margin:26px 0 10px}
+.msg{background:var(--mint);border:1px solid #9fcfae;border-radius:12px;padding:16px;font-size:15px;white-space:pre-line}
+
+/* about */
+.about-img{width:100%;border:2px solid #a8894a;border-radius:16px;margin:14px 0 8px}
+.about h2{font-size:30px;margin:28px 0 8px}
+.about ol{padding-left:20px}
+.about li{margin-bottom:6px}
+.checks{list-style:none}
+.checks li{display:flex;gap:10px;margin-bottom:8px}
+.checks svg{flex:0 0 20px;width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2.5;margin-top:3px}
+
+footer{background:var(--dark);color:#d9cdb6;padding:28px 0 36px;margin-top:20px}
+footer h3{font-size:26px;letter-spacing:1px;color:var(--cream);margin-bottom:14px;text-transform:uppercase}
+footer p{margin-bottom:14px;font-size:15px}
+footer a{color:#e6c16a;font-weight:600}
+
+@media(min-width:720px){
+  .hero h1{font-size:60px}
+  .grid{grid-template-columns:repeat(4,1fr)}
+}
